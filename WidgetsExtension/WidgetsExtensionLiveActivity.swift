@@ -48,8 +48,6 @@ struct WidgetsExtensionLiveActivity: Widget {
                 Text(context.state.emoji)
             }
             .contentMargins(.trailing, 8, for: .expanded)
-            .widgetURL(URL(string: "http://www.apple.com"))
-            .keylineTint(Color.red)
         }
     }
 }
