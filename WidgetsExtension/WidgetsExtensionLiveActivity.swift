@@ -27,9 +27,15 @@ struct WidgetsExtensionLiveActivity: Widget {
                 DynamicIslandExpandedRegion(.leading) {
                     Text("Leading")
                 }
+                
                 DynamicIslandExpandedRegion(.trailing) {
                     Text("Trailing")
                 }
+                
+                DynamicIslandExpandedRegion(.center) {
+                    Text("Center")
+                }
+                
                 DynamicIslandExpandedRegion(.bottom) {
                     Text("Bottom \(context.state.emoji)")
                     // more content
@@ -41,6 +47,7 @@ struct WidgetsExtensionLiveActivity: Widget {
             } minimal: {
                 Text(context.state.emoji)
             }
+            .contentMargins(.trailing, 8, for: .expanded)
             .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.red)
         }
