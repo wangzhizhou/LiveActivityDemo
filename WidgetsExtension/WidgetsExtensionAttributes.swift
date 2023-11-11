@@ -17,12 +17,14 @@ struct WidgetsExtensionAttributes: ActivityAttributes {
     var name: String
 }
 
+@available(iOSApplicationExtension 16.1, *)
 extension WidgetsExtensionAttributes {
     static var preview: WidgetsExtensionAttributes {
         WidgetsExtensionAttributes(name: "World")
     }
 }
 
+@available(iOSApplicationExtension 16.1, *)
 extension WidgetsExtensionAttributes.ContentState {
     static var smiley: WidgetsExtensionAttributes.ContentState {
         WidgetsExtensionAttributes.ContentState(emoji: "😀")

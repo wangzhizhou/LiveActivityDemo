@@ -9,6 +9,7 @@ import ActivityKit
 import WidgetKit
 import SwiftUI
 
+@available(iOS 16.1, *)
 struct WidgetsExtensionLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: WidgetsExtensionAttributes.self) { context in
@@ -18,7 +19,7 @@ struct WidgetsExtensionLiveActivity: Widget {
             }
             .activityBackgroundTint(Color.cyan)
             .activitySystemActionForegroundColor(Color.black)
-
+            
         } dynamicIsland: { context in
             DynamicIsland {
                 // Expanded UI goes here.  Compose the expanded UI through
@@ -44,11 +45,4 @@ struct WidgetsExtensionLiveActivity: Widget {
             .keylineTint(Color.red)
         }
     }
-}
-
-#Preview("Notification", as: .content, using: WidgetsExtensionAttributes.preview) {
-   WidgetsExtensionLiveActivity()
-} contentStates: {
-    WidgetsExtensionAttributes.ContentState.smiley
-    WidgetsExtensionAttributes.ContentState.starEyes
 }

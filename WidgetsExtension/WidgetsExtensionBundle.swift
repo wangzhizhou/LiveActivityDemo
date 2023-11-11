@@ -9,6 +9,7 @@ import WidgetKit
 import SwiftUI
 
 @main
+@available(iOSApplicationExtension 16.1, *)
 struct WidgetsExtensionBundle: WidgetBundle {
     var body: some Widget {
         WidgetsExtensionLiveActivity()

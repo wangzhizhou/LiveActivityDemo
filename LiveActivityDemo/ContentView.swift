@@ -27,14 +27,23 @@ extension ContentView {
     func startLiveActivity() {
         
         do {
-            _ = try Activity.request(
-                attributes: WidgetsExtensionAttributes.preview,
-                content: .init(
-                    state: WidgetsExtensionAttributes.ContentState.smiley,
-                    staleDate: nil
-                ),
-                pushType: nil
-            )
+            if #available(iOS 16.2, *) {
+                _ = try Activity.request(
+                    attributes: WidgetsExtensionAttributes.preview,
+                    content: .init(
+                        state: WidgetsExtensionAttributes.ContentState.smiley,
+                        staleDate: nil
+                    ),
+                    pushType: nil
+                )
+            } else {
+                // Fallback on earlier versions
+                _ = try Activity.request(
+                    attributes: WidgetsExtensionAttributes.preview,
+                    contentState: WidgetsExtensionAttributes.ContentState.smiley,
+                    pushType: nil
+                )
+            }
         } catch {
             print(error.localizedDescription)
         }
