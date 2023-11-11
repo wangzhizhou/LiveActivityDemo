@@ -8,14 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button("start") {
+                startLiveActivity()
+            }
+            .buttonStyle(.bordered)
         }
         .padding()
+    }
+}
+
+import ActivityKit
+
+extension ContentView {
+    
+    func startLiveActivity() {
+        
+        do {
+            _ = try Activity.request(
+                attributes: WidgetsExtensionAttributes.preview,
+                content: .init(
+                    state: WidgetsExtensionAttributes.ContentState.smiley,
+                    staleDate: nil
+                ),
+                pushType: nil
+            )
+        } catch {
+            print(error.localizedDescription)
+        }
+        
     }
 }
 
