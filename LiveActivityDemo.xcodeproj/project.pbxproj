@@ -59,6 +59,8 @@
 		2B34CED82AFCE969001C2A0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B34CEDA2AFCE969001C2A0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B34CEE42AFD164E001C2A0B /* WidgetsExtensionAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetsExtensionAttributes.swift; sourceTree = "<group>"; };
+		2B6941742AFF5F67000DE277 /* LiveActivityDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LiveActivityDemo.entitlements; sourceTree = "<group>"; };
+		2B6941762AFF5FB4000DE277 /* SampleCode.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = SampleCode.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,8 @@
 		2B34C4B02AFCAC3B001C2A0B /* LiveActivityDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2B6941752AFF5FB4000DE277 /* Configuration */,
+				2B6941742AFF5F67000DE277 /* LiveActivityDemo.entitlements */,
 				2B34C4B12AFCAC3B001C2A0B /* LiveActivityDemoApp.swift */,
 				2B34C4B32AFCAC3B001C2A0B /* ContentView.swift */,
 				2B34C4B52AFCAC3C001C2A0B /* Assets.xcassets */,
@@ -138,6 +142,14 @@
 				2B34CEDA2AFCE969001C2A0B /* Info.plist */,
 			);
 			path = WidgetsExtension;
+			sourceTree = "<group>";
+		};
+		2B6941752AFF5FB4000DE277 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				2B6941762AFF5FB4000DE277 /* SampleCode.xcconfig */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +199,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					2B34C4AD2AFCAC3B001C2A0B = {
 						CreatedOnToolsVersion = 15.0;
@@ -270,6 +282,7 @@
 /* Begin XCBuildConfiguration section */
 		2B34C4BA2AFCAC3C001C2A0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B6941762AFF5FB4000DE277 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -333,6 +346,7 @@
 		};
 		2B34C4BB2AFCAC3C001C2A0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B6941762AFF5FB4000DE277 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -389,14 +403,16 @@
 		};
 		2B34C4BD2AFCAC3C001C2A0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B6941762AFF5FB4000DE277 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LiveActivityDemo/LiveActivityDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LiveActivityDemo/Preview Content\"";
-				DEVELOPMENT_TEAM = 6UF48V8A6H;
+				DEVELOPMENT_TEAM = 2N62934Y28;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
@@ -411,7 +427,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jokerhub.LiveActivityDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -421,14 +437,16 @@
 		};
 		2B34C4BE2AFCAC3C001C2A0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B6941762AFF5FB4000DE277 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LiveActivityDemo/LiveActivityDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LiveActivityDemo/Preview Content\"";
-				DEVELOPMENT_TEAM = 6UF48V8A6H;
+				DEVELOPMENT_TEAM = 2N62934Y28;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
@@ -443,7 +461,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jokerhub.LiveActivityDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -453,12 +471,13 @@
 		};
 		2B34CEDF2AFCE969001C2A0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B6941762AFF5FB4000DE277 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6UF48V8A6H;
+				DEVELOPMENT_TEAM = 2N62934Y28;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WidgetsExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WidgetsExtension;
@@ -469,7 +488,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jokerhub.LiveActivityDemo.WidgetsExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_EXTENSION_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -480,12 +499,13 @@
 		};
 		2B34CEE02AFCE969001C2A0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B6941762AFF5FB4000DE277 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6UF48V8A6H;
+				DEVELOPMENT_TEAM = 2N62934Y28;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WidgetsExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WidgetsExtension;
@@ -496,7 +516,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jokerhub.LiveActivityDemo.WidgetsExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_EXTENSION_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
